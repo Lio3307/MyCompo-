@@ -1,9 +1,13 @@
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 
-const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false); 
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+interface SidebarProps  {
+  children?: ReactNode
+}
+
+const Sidebar = ({children} : SidebarProps) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false); 
+  const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 
   return (
     <div className="flex min-h-screen">
@@ -83,10 +87,7 @@ const Sidebar = () => {
       </aside>
 
       <main className="flex-1 p-4">
-        <h1 className="text-2xl font-bold">Main Content</h1>
-        <p className="mt-2 text-gray-600">
-          Ini adalah area konten utama. Sidebar tetap responsif di semua layar.
-        </p>
+        {children}
       </main>
     </div>
   );
