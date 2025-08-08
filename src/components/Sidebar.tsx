@@ -1,5 +1,6 @@
 
 import { useState, type ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 interface SidebarProps  {
   children?: ReactNode
@@ -36,12 +37,12 @@ const Sidebar = ({children, getPath} : SidebarProps) => {
         <nav className="p-4">
           <ul className="space-y-2">
             <li>
-              <a
-                href="#"
-                className="block p-2 rounded hover:bg-gray-100 transition"
+              <Link
+              to={"/dashboard/home"}
+                className={`block p-2 ${getPath === "home" ? 'bg-gray-100' : ''} rounded hover:bg-gray-100 transition`}
               >
-                Dashboard
-              </a>
+                Started
+              </Link>
             </li>
 
             <li>
