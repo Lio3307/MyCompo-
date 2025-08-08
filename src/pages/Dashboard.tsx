@@ -5,11 +5,13 @@ import Sidebar from "../components/Sidebar"
 const Dashboard = () => {
 
     const location = useLocation()
-    const pathName: string = location.pathname
+    const pathName: string = location.pathname.split("/")[2] || "home"
 
     return (
-        <Sidebar>
+        <Sidebar getPath={pathName}>
             <Outlet/>
         </Sidebar>
     )
 }
+
+export default Dashboard;

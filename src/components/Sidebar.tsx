@@ -3,9 +3,10 @@ import { useState, type ReactNode } from "react";
 
 interface SidebarProps  {
   children?: ReactNode
+  getPath: string
 }
 
-const Sidebar = ({children} : SidebarProps) => {
+const Sidebar = ({children, getPath} : SidebarProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false); 
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 

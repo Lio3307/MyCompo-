@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom"
-import SideBar from "./components/Sidebar"
+import Dashboard from "./pages/Dashboard"
+import Home from "./pages/Home"
 
 
 function App() {
@@ -7,7 +8,9 @@ function App() {
   return (
     <>
     <Routes>
-      <Route path="/" element={<}
+      <Route path="/dashboard" element={<Dashboard/>}>
+        <Route path="home" element={<Home/>}/>
+      </Route>
     </Routes>
     </>
   )
