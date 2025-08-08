@@ -8,7 +8,11 @@ interface SidebarProps {
 
 const Sidebar = ({ children, getPath }: SidebarProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
+
+  function toggleDropdown(param: string): void {
+    setDropdownOpen(prev => prev === param ? null : param)
+  }
 
   return (
     <div className="flex min-h-screen">
@@ -33,7 +37,7 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
           ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
       >
         <div className="p-4 font-bold text-lg border-b flex justify-between items-center">
-          <span>My Sidebar</span>
+          <span>My Compo</span>
           <button
             className="md:hidden text-2xl font-bold focus:outline-none"
             onClick={() => setIsOpen(false)}
@@ -59,31 +63,60 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
 
             <li>
               <button
-                onClick={() => setDropdownOpen(!dropdownOpen)}
+                onClick={() => toggleDropdown("navbar")}
                 className="flex items-center justify-between w-full p-2 rounded hover:bg-gray-100 transition"
-                aria-expanded={dropdownOpen}
+                aria-expanded={dropdownOpen === "navbar"}
               >
-                <span>Projects</span>
-                <span>{dropdownOpen ? "▲" : "▼"}</span>
+                <span>Navbar</span>
+                <span>{dropdownOpen === "navbar" ? "▲" : "▼"}</span>
               </button>
-              {dropdownOpen && (
+              {dropdownOpen === "navbar" && (
                 <ul className="ml-4 mt-1 space-y-1">
                   <li>
                     <a
                       href="#"
                       className="block p-2 rounded hover:bg-gray-100 transition"
-                      onClick={() => setIsOpen(false)}
                     >
-                      Project A
+                      Sidebar
                     </a>
                   </li>
                   <li>
                     <a
                       href="#"
                       className="block p-2 rounded hover:bg-gray-100 transition"
-                      onClick={() => setIsOpen(false)}
                     >
-                      Project B
+                      Headerbar
+                    </a>
+                  </li>
+                </ul>
+              )}
+            </li>
+
+            <li>
+              <button
+                onClick={() => toggleDropdown("hero")}
+                className="flex items-center justify-between w-full p-2 rounded hover:bg-gray-100 transition"
+                aria-expanded={dropdownOpen === "hero"}
+              >
+                <span>Hero Section</span>
+                <span>{dropdownOpen === "hero" ? "▲" : "▼"}</span>
+              </button>
+              {dropdownOpen === "hero" && (
+                <ul className="ml-4 mt-1 space-y-1">
+                  <li>
+                    <a
+                      href="#"
+                      className="block p-2 rounded hover:bg-gray-100 transition"
+                    >
+                      Hero left
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block p-2 rounded hover:bg-gray-100 transition"
+                    >
+                      Hero right
                     </a>
                   </li>
                 </ul>
@@ -94,7 +127,11 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
               <a
                 href="#"
                 className="block p-2 rounded hover:bg-gray-100 transition"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setIsOpen(false);
+                }}
               >
                 Settings
               </a>

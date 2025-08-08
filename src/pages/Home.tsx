@@ -20,7 +20,7 @@ const Home = () => {
 
         <div className="mt-[3rem] justify-center flex flex-wrap gap-4">
           <button
-            className="w-48 font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
+            className=" font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
           hover:bg-gray-400 hover:shadow-lg hover:scale-105
           transition duration-300 ease-in-out
           hover:cursor-pointer
@@ -29,7 +29,7 @@ const Home = () => {
             Sidebar
           </button>
           <button
-            className="w-48 font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
+            className=" font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
           hover:bg-gray-400 hover:shadow-lg hover:scale-105
           transition duration-300 ease-in-out
           hover:cursor-pointer
@@ -38,7 +38,7 @@ const Home = () => {
             Footer
           </button>
           <button
-            className="w-48 font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
+            className=" font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
           hover:bg-gray-400 hover:shadow-lg hover:scale-105
           transition duration-300 ease-in-out
           hover:cursor-pointer
@@ -47,7 +47,7 @@ const Home = () => {
             Hero
           </button>
           <button
-            className="w-48 font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
+            className=" font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
           hover:bg-gray-400 hover:shadow-lg hover:scale-105
           transition duration-300 ease-in-out
           hover:cursor-pointer
@@ -56,7 +56,7 @@ const Home = () => {
             Navbar
           </button>
           <button
-            className="w-48 font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
+            className=" font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
           hover:bg-gray-400 hover:shadow-lg hover:scale-105
           transition duration-300 ease-in-out
           hover:cursor-pointer
