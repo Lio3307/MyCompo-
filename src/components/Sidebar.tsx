@@ -37,7 +37,7 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
           ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
       >
         <div className="p-4 font-bold text-lg border-b flex justify-between items-center">
-          <span>My Compo</span>
+          <span className="ml-[1.9rem] text-[1.7rem]">My Compo</span>
           <button
             className="md:hidden text-2xl font-bold focus:outline-none"
             onClick={() => setIsOpen(false)}
