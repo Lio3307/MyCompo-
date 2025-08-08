@@ -14,11 +14,11 @@ const Sidebar = ({children, getPath} : SidebarProps) => {
   return (
     <div className="flex min-h-screen">
       <button
-        className="md:hidden p-3 focus:outline-none"
+        className="md:hidden px-[0.29rem] focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle Sidebar"
       >
-        {isOpen ? "✖" : "☰"}
+        {isOpen ? "" : "☰"}
       </button>
 
       {isOpen && (
@@ -88,7 +88,7 @@ const Sidebar = ({children, getPath} : SidebarProps) => {
         </nav>
       </aside>
 
-      <main className="flex-1 p-4">
+      <main className="flex-1 md:ml-[2rem] mt-[2rem]">
         {children}
       </main>
     </div>
