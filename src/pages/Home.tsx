@@ -20,43 +20,47 @@ const Home = () => {
 
         <div className="mt-[3rem] justify-center flex flex-wrap gap-4">
           <button
-            className="bg-gray-300 py-6 rounded-[0.5rem] px-[4rem] 
-        hover:bg-gray-400 hover:shadow-lg hover:scale-105
-        transition duration-300 ease-in-out
-        hover:cursor-pointer
-        focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-48 font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
+          hover:bg-gray-400 hover:shadow-lg hover:scale-105
+          transition duration-300 ease-in-out
+          hover:cursor-pointer
+          focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
             Sidebar
           </button>
           <button
-            className="bg-gray-300 py-6 rounded-[0.5rem] px-[4rem] 
-        hover:bg-gray-400 hover:shadow-lg hover:scale-105
-        transition duration-300 ease-in-out hover:cursor-pointer
-        focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-48 font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
+          hover:bg-gray-400 hover:shadow-lg hover:scale-105
+          transition duration-300 ease-in-out
+          hover:cursor-pointer
+          focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
             Footer
           </button>
           <button
-            className="bg-gray-300 py-6 rounded-[0.5rem] px-[4rem] 
-        hover:bg-gray-400 hover:shadow-lg hover:scale-105
-        transition duration-300 ease-in-out hover:cursor-pointer
-        focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-48 font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
+          hover:bg-gray-400 hover:shadow-lg hover:scale-105
+          transition duration-300 ease-in-out
+          hover:cursor-pointer
+          focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
             Hero
           </button>
           <button
-            className="bg-gray-300 py-6 rounded-[0.5rem] px-[4rem] 
-        hover:bg-gray-400 hover:shadow-lg hover:scale-105
-        transition duration-300 ease-in-out hover:cursor-pointer
-        focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-48 font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
+          hover:bg-gray-400 hover:shadow-lg hover:scale-105
+          transition duration-300 ease-in-out
+          hover:cursor-pointer
+          focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
             Navbar
           </button>
           <button
-            className="bg-gray-300 py-6 rounded-[0.5rem] px-[4rem] 
-        hover:bg-gray-400 hover:shadow-lg hover:scale-105
-        transition duration-300 ease-in-out hover:cursor-pointer
-        focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-48 font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
+          hover:bg-gray-400 hover:shadow-lg hover:scale-105
+          transition duration-300 ease-in-out
+          hover:cursor-pointer
+          focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
             Sidebar
           </button>
