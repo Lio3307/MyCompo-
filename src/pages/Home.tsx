@@ -1,9 +1,11 @@
 const Home = () => {
   return (
     <>
-      <div className="container max-w-[50rem] mx-auto p-6">
-        <h1 className="text-[2rem] font-bold mb-4">Get Started</h1>
-        <p className="text-base leading-relaxed text-gray-700">
+      <div className="container max-w-[50rem] mx-auto p-8 rounded-2xl ">
+        <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+          Get Started
+        </h1>
+        <p className="text-lg leading-relaxed text-gray-700 mb-8 bg-gray-50 p-6 rounded-xl border-l-4 border-gray-300">
           This website helps you speed up your UI development by offering
           ready-to-use, reusable components. You no longer have to build UI
           elements from scratch or dig through old code repositories. Easily
@@ -12,57 +14,59 @@ const Home = () => {
           based on Tailwind CSS.
         </p>
 
-        <h1 className="mt-[3rem] text-[2rem] font-bold">UI Components</h1>
-        <p className="text-base text-gray-700">
+        <h1 className="mt-12 text-4xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+          UI Components
+        </h1>
+        <p className="text-lg text-gray-700 mt-4 mb-8 bg-gray-50 p-6 rounded-xl border-l-4 border-gray-300">
           The available UI elements are organized as components and HTML
           snippets for easy integration.
         </p>
 
-        <div className="mt-[3rem] justify-center flex flex-wrap gap-4">
+        <div className="mt-12 justify-center flex flex-wrap gap-6">
           <button
-            className=" font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
-          hover:bg-gray-400 hover:shadow-lg hover:scale-105
-          transition duration-300 ease-in-out
-          hover:cursor-pointer
-          focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="font-bold bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 
+            py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105
+            transition-all duration-300 ease-in-out hover:cursor-pointer
+            focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50
+            text-gray-800 text-lg border border-gray-300 min-w-[140px]"
           >
             Sidebar
           </button>
           <button
-            className=" font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
-          hover:bg-gray-400 hover:shadow-lg hover:scale-105
-          transition duration-300 ease-in-out
-          hover:cursor-pointer
-          focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="font-bold bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 
+            py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105
+            transition-all duration-300 ease-in-out hover:cursor-pointer
+            focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50
+            text-gray-800 text-lg border border-gray-300 min-w-[140px]"
           >
             Footer
           </button>
           <button
-            className=" font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
-          hover:bg-gray-400 hover:shadow-lg hover:scale-105
-          transition duration-300 ease-in-out
-          hover:cursor-pointer
-          focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="font-bold bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 
+            py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105
+            transition-all duration-300 ease-in-out hover:cursor-pointer
+            focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50
+            text-gray-800 text-lg border border-gray-300 min-w-[140px]"
           >
             Hero
           </button>
           <button
-            className=" font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
-          hover:bg-gray-400 hover:shadow-lg hover:scale-105
-          transition duration-300 ease-in-out
-          hover:cursor-pointer
-          focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="font-bold bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 
+            py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105
+            transition-all duration-300 ease-in-out hover:cursor-pointer
+            focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50
+            text-gray-800 text-lg border border-gray-300 min-w-[140px]"
           >
             Navbar
           </button>
           <button
-            className=" font-bold bg-gray-300 py-6 rounded-[0.5rem] px-6
-          hover:bg-gray-400 hover:shadow-lg hover:scale-105
-          transition duration-300 ease-in-out
-          hover:cursor-pointer
-          focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="font-bold bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 
+            py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105
+            transition-all duration-300 ease-in-out hover:cursor-pointer
+            focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50
+            text-gray-800 text-lg border border-gray-300 min-w-[140px]"
           >
-            COntact
+            Contact
           </button>
         </div>
       </div>
