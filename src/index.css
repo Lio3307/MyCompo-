@@ -1,1 +1,17 @@
 @import "tailwindcss";
+.code-scroll {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+  overflow: auto; 
+}
+
+.code-scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.code-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+    
