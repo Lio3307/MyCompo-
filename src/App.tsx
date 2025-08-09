@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import HeroSection from "./pages/HeroSection";
 import Statistic from "./pages/Statistic";
+import Header from "./pages/Header";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="hero" element={<HeroSection />} />
         <Route path="statistic" element={<Statistic />} />
+        <Route path="header" element={<Header />} />
       </Route>
     </Routes>
   );
