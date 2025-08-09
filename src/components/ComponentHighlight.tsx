@@ -29,15 +29,12 @@ const ComponentHighlight = ({ sourceCode, title }: ComponentProps) => {
         {showCode ? "Hide Code" : "Show Code"}
       </button>
       {showCode ? (
-        <div className="outline-2 outline-purple-500 outline-offset-2 shadow-2xl rounded-xl">
           <CodeHighlighter
             codeString={sourceCode}
             language="html"
             maxHeight="70vh"
             outerMaxWidth="calc(100vw - 18rem)"
-            containerPadding="1rem"
           />
-        </div>
       ) : (
         <div 
           className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl shadow-xl p-8 mx-4 border border-gray-200"

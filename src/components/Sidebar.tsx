@@ -136,7 +136,7 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
     </nav>
   </aside>
 
-  <main className="flex-1 md:ml-6 mt-6 p-4">{children}</main>
+  <main className="flex-1 md:ml-6 mt-6">{children}</main>
 </div>
   );
 };
