@@ -62,7 +62,7 @@ const Home = () => {
           hover:cursor-pointer
           focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
-            Sidebar
+            COntact
           </button>
         </div>
       </div>
