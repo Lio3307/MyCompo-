@@ -45,7 +45,7 @@ const Contact = () => {
     <>
       <h2 className=" text-2xl font-bold mb-4">Contact Component Code</h2>
       <button
-        className={`text-[1rem] hover:cursor-pointer  px-[1.4rem] py-[0.4rem] font-bold ${
+        className={`text-[1rem] rounded-[0.3rem] hover:cursor-pointer  px-[1.4rem] py-[0.4rem] font-bold ${
           showCode ? "bg-red-600" : "bg-sky-500"
         } text-white`}
          onClick={(e) => {
