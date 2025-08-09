@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <>
@@ -41,15 +43,16 @@ const Home = () => {
           >
             Footer
           </button>
-          <button
+          <Link
+            to={"/dashboard/hero"}
             className="font-bold bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 
-            py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105
+            py-8 px-12 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105
             transition-all duration-300 ease-in-out hover:cursor-pointer
             focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50
             text-gray-800 text-lg border border-gray-300 min-w-[140px]"
           >
             Hero
-          </button>
+          </Link>
           <button
             className="font-bold bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 
             py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105
@@ -59,7 +62,8 @@ const Home = () => {
           >
             Navbar
           </button>
-          <button
+          <Link
+            to={"/dashboard/contact"}
             className="font-bold bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 
             py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105
             transition-all duration-300 ease-in-out hover:cursor-pointer
@@ -67,7 +71,7 @@ const Home = () => {
             text-gray-800 text-lg border border-gray-300 min-w-[140px]"
           >
             Contact
-          </button>
+          </Link>
         </div>
       </div>
     </>
