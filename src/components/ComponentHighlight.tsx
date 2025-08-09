@@ -39,9 +39,10 @@ const ComponentHighlight = ({ sourceCode, title }: ComponentProps) => {
           />
         </div>
       ) : (
-        <div className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl shadow-xl p-8 mx-4 border border-gray-200">
-          {sourceCode}
-        </div>
+        <div 
+          className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl shadow-xl p-8 mx-4 border border-gray-200"
+          dangerouslySetInnerHTML={{ __html: sourceCode }}
+        />
       )}
     </>
   );

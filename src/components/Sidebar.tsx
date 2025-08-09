@@ -105,6 +105,17 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
                 Contact
               </Link>
             </li>
+
+            <li>
+              <Link
+                to={"/dashboard/Hero"}
+                className={`block p-2 rounded hover:bg-gray-100 transition ${
+                  getPath === "contact" ? "bg-gray-100" : ""
+                }`}
+              >
+                Hero
+              </Link>
+            </li>
           </ul>
         </nav>
       </aside>
