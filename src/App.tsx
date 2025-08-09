@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import HeroSection from "./pages/HeroSection";
 import Statistic from "./pages/Statistic";
 import Header from "./pages/Header";
+import Alert from "./pages/Alert";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="hero" element={<HeroSection />} />
         <Route path="statistic" element={<Statistic />} />
         <Route path="header" element={<Header />} />
+        <Route path="alert" element={<Alert />} />
       </Route>
     </Routes>
   );
