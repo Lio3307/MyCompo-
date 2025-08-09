@@ -132,6 +132,21 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
                 Hero
               </Link>
             </li>
+
+            <li>
+              <Link
+                to={"/dashboard/statistic"}
+                className={`block p-4 rounded-xl font-semibold text-gray-700 hover:bg-gradient-to-r hover:from-gray-100 hover:to-gray-200 transition-all duration-300 border-2 ${
+                  getPath === "statistic"
+                    ? "bg-gradient-to-r from-gray-200 to-gray-300 border-gray-400 shadow-lg text-gray-800"
+                    : "border-transparent hover:border-gray-300 hover:shadow-md"
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                Statistic
+              </Link>
+            </li>
+
           </ul>
         </nav>
       </aside>
