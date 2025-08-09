@@ -14,6 +14,7 @@ export default function CodeHighlighter({
   outerMaxWidth = "calc(100vw - 4rem)",
 }: CodeHighlighterProps) {
   return (
+    <div className="flex justify-center">
 <div
   className="code-highlighter-container"
   style={{
@@ -111,6 +112,6 @@ export default function CodeHighlighter({
       }
     `}
   </style>
-</div>
+</div></div>
   );
 }
