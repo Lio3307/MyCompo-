@@ -55,7 +55,6 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
                 className={`block p-2 rounded hover:bg-gray-100 transition ${
                   getPath === "home" ? "bg-gray-100" : ""
                 }`}
-                onClick={() => setIsOpen(false)}
               >
                 Started
               </Link>
@@ -63,7 +62,11 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
 
             <li>
               <button
-                onClick={() => toggleDropdown("navbar")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  toggleDropdown("navbar");
+                }}
                 className="flex items-center justify-between w-full p-2 rounded hover:bg-gray-100 transition"
                 aria-expanded={dropdownOpen === "navbar"}
               >
@@ -93,48 +96,14 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
             </li>
 
             <li>
-              <button
-                onClick={() => toggleDropdown("hero")}
-                className="flex items-center justify-between w-full p-2 rounded hover:bg-gray-100 transition"
-                aria-expanded={dropdownOpen === "hero"}
+              <Link
+                to={"/dashboard/contact"}
+                className={`block p-2 rounded hover:bg-gray-100 transition ${
+                  getPath === "contact" ? "bg-gray-100" : ""
+                }`}
               >
-                <span>Hero Section</span>
-                <span>{dropdownOpen === "hero" ? "▲" : "▼"}</span>
-              </button>
-              {dropdownOpen === "hero" && (
-                <ul className="ml-4 mt-1 space-y-1">
-                  <li>
-                    <Link
-                      to={"/dashboard/contact"}
-                      className="block p-2 rounded hover:bg-gray-100 transition"
-                    >
-                      Contact
-                    </Link>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="block p-2 rounded hover:bg-gray-100 transition"
-                    >
-                      Hero right
-                    </a>
-                  </li>
-                </ul>
-              )}
-            </li>
-
-            <li>
-              <a
-                href="#"
-                className="block p-2 rounded hover:bg-gray-100 transition"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  setIsOpen(false);
-                }}
-              >
-                Settings
-              </a>
+                Contact
+              </Link>
             </li>
           </ul>
         </nav>
