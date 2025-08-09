@@ -146,7 +146,6 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
                 Statistic
               </Link>
             </li>
-
           </ul>
         </nav>
       </aside>
