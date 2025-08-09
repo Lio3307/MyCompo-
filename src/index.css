@@ -1,4 +1,6 @@
 @import "tailwindcss";
+
+/* for hiding the scrollable bar */
 .code-scroll {
   -ms-overflow-style: none; 
   scrollbar-width: none; 

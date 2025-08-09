@@ -11,11 +11,11 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
 
   function toggleDropdown(param: string): void {
-    setDropdownOpen(prev => prev === param ? null : param)
+    setDropdownOpen((prev) => (prev === param ? null : param));
   }
 
   return (
-    <div className="flex sticky min-h-screen">
+    <div className=" flex min-h-screen">
       <button
         className="md:hidden fixed top-4 left-4 z-60 px-3 py-2 bg-gray-200 rounded shadow-md focus:outline-none"
         onClick={() => setIsOpen(true)}
@@ -33,7 +33,7 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
       )}
 
       <aside
-        className={`fixed md:static min-h-screen top-0 left-0 h-full w-64 bg-white shadow-md z-60 transform transition-transform duration-300
+        className={`fixed md:sticky min-h-screen md:top-0 top-0 left-0 h-full w-64 bg-white shadow-md z-60 transform transition-transform duration-300
           ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
       >
         <div className="p-4 font-bold text-lg border-b flex justify-between items-center">
@@ -105,7 +105,7 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
                 <ul className="ml-4 mt-1 space-y-1">
                   <li>
                     <Link
-                      to={'/dashboard/contact'}
+                      to={"/dashboard/contact"}
                       className="block p-2 rounded hover:bg-gray-100 transition"
                     >
                       Contact
