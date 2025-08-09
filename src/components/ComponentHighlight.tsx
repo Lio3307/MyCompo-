@@ -11,7 +11,7 @@ const ComponentHighlight = ({ sourceCode, title }: ComponentProps) => {
 
   return (
     <>
-      <h2 className="ml-[1rem] mt-[2rem] text-3xl font-bold mb-6  bg-clip-text">
+      <h2 className="ml-[1rem] mt-[3.4rem] text-3xl font-bold mb-6  bg-clip-text">
         {title}
       </h2>
       <button
