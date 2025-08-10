@@ -52,9 +52,83 @@ const Statistic = () => {
   </div>
 </section>`;
 
+const code1 =  `<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-semibold title-font mb-4 text-gray-900">Website Performance</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Our growth metrics over the last quarter.</p>
+    </div>
+    <div class="flex flex-wrap -m-4 text-center">
+      <div class="p-4 sm:w-1/2 lg:w-1/4 w-full">
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h2 class="title-font font-medium text-4xl text-gray-900">12K</h2>
+          <p class="leading-relaxed text-indigo-500">Active Users</p>
+        </div>
+      </div>
+      <div class="p-4 sm:w-1/2 lg:w-1/4 w-full">
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h2 class="title-font font-medium text-4xl text-gray-900">8.4K</h2>
+          <p class="leading-relaxed text-indigo-500">Downloads</p>
+        </div>
+      </div>
+      <div class="p-4 sm:w-1/2 lg:w-1/4 w-full">
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h2 class="title-font font-medium text-4xl text-gray-900">2.1K</h2>
+          <p class="leading-relaxed text-indigo-500">Subscribers</p>
+        </div>
+      </div>
+      <div class="p-4 sm:w-1/2 lg:w-1/4 w-full">
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h2 class="title-font font-medium text-4xl text-gray-900">98%</h2>
+          <p class="leading-relaxed text-indigo-500">Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`
+
+const code2 = `<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="border border-gray-200 rounded-lg p-6 text-center">
+        <svg class="w-12 h-12 mx-auto text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+        </svg>
+        <h2 class="text-3xl font-bold mt-4">74</h2>
+        <p class="mt-1 text-gray-500">Files</p>
+      </div>
+      <div class="border border-gray-200 rounded-lg p-6 text-center">
+        <svg class="w-12 h-12 mx-auto text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <circle cx="9" cy="7" r="4"></circle>
+        </svg>
+        <h2 class="text-3xl font-bold mt-4">1.3K</h2>
+        <p class="mt-1 text-gray-500">Users</p>
+      </div>
+      <div class="border border-gray-200 rounded-lg p-6 text-center">
+        <svg class="w-12 h-12 mx-auto text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M8 17l4 4 4-4"></path>
+        </svg>
+        <h2 class="text-3xl font-bold mt-4">2.7K</h2>
+        <p class="mt-1 text-gray-500">Downloads</p>
+      </div>
+      <div class="border border-gray-200 rounded-lg p-6 text-center">
+        <svg class="w-12 h-12 mx-auto text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M12 22s8-4 8-10V5"></path>
+        </svg>
+        <h2 class="text-3xl font-bold mt-4">46</h2>
+        <p class="mt-1 text-gray-500">Places</p>
+      </div>
+    </div>
+  </div>
+</section>
+`
+
   return (
     <>
         <ComponentHighlight sourceCode={code} title="Statistic Component"/>
+        <ComponentHighlight sourceCode={code1} title=""/>
+        <ComponentHighlight sourceCode={code2} title=""/>
     </>
   );
 };
