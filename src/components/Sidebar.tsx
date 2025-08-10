@@ -94,12 +94,16 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="block p-3 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300 text-gray-600 font-medium border border-transparent hover:border-gray-300"
+                    <Link
+                      to={"/dashboard/header"}
+                      className={`block p-3 rounded-lg ${
+                        getPath === "header"
+                          ? "bg-white shadow-md border border-gray-300"
+                          : ""
+                      } hover:bg-white hover:shadow-md transition-all duration-300 text-gray-600 font-medium border border-transparent hover:border-gray-300`}
                     >
-                      Headerbar
-                    </a>
+                      Header
+                    </Link>
                   </li>
                 </ul>
               )}
@@ -149,20 +153,6 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
 
             <li>
               <Link
-                to={"/dashboard/header"}
-                className={`block p-4 rounded-xl font-semibold text-gray-700 hover:bg-gradient-to-r hover:from-gray-100 hover:to-gray-200 transition-all duration-300 border-2 ${
-                  getPath === "header"
-                    ? "bg-gradient-to-r from-gray-200 to-gray-300 border-gray-400 shadow-lg text-gray-800"
-                    : "border-transparent hover:border-gray-300 hover:shadow-md"
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                Header
-              </Link>
-            </li>
-
-            <li>
-              <Link
                 to={"/dashboard/alert"}
                 className={`block p-4 rounded-xl font-semibold text-gray-700 hover:bg-gradient-to-r hover:from-gray-100 hover:to-gray-200 transition-all duration-300 border-2 ${
                   getPath === "alert"
@@ -202,7 +192,6 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
                 CTA
               </Link>
             </li>
-
           </ul>
         </nav>
       </aside>
