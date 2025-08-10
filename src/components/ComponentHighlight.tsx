@@ -40,7 +40,7 @@ const ComponentHighlight = ({ sourceCode, title }: ComponentProps) => {
         {showCode ? "Hide Code" : "Show Code"}
       </button>
 
-      <div className="relative bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl mb-4 shadow-xl border border-gray-200">
+      <div className="relative hover:cursor-pointer bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl mb-4 shadow-xl border border-gray-200">
         <button
           style={{ zIndex: 50 }}
           onClick={(e) => {

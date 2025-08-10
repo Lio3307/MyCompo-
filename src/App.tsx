@@ -6,6 +6,7 @@ import HeroSection from "./pages/HeroSection";
 import Statistic from "./pages/Statistic";
 import Header from "./pages/Header";
 import Alert from "./pages/Alert";
+import Breadcrumbs from "./pages/Breadcrumbs";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="statistic" element={<Statistic />} />
         <Route path="header" element={<Header />} />
         <Route path="alert" element={<Alert />} />
+        <Route path="breadcrumb" element={<Breadcrumbs />} />
       </Route>
     </Routes>
   );

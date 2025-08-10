@@ -15,7 +15,7 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex h-screen bg-gray-50">
       <button
         className="md:hidden fixed top-6 left-6 z-60 px-4 py-3 bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 rounded-xl shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-gray-300 transition-all duration-300 transform hover:scale-105 text-gray-800 font-bold text-lg border border-gray-300"
         onClick={() => setIsOpen(true)}
@@ -33,11 +33,11 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
       )}
 
       <aside
-        className={`fixed md:sticky min-h-screen md:top-0 top-0 left-0 h-full w-72 bg-white shadow-2xl z-60 transform transition-all duration-300 border-r-2 border-gray-200 ${
+        className={`fixed md:sticky top-0 left-0 h-screen w-72 bg-white shadow-2xl z-60 transform transition-all duration-300 border-r-2 border-gray-200 overflow-y-auto ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0`}
       >
-        <div className="p-6 font-bold text-xl border-b-2 border-gray-200 flex justify-between items-center bg-gradient-to-r from-gray-50 to-gray-100">
+        <div className="p-6 font-bold text-xl border-b-2 border-gray-200 flex justify-between items-center bg-gradient-to-r from-gray-50 to-gray-100 sticky top-0 z-10">
           <span className="ml-2 text-3xl bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
             My Compo
           </span>
@@ -175,12 +175,24 @@ const Sidebar = ({ children, getPath }: SidebarProps) => {
               </Link>
             </li>
 
-
+            <li>
+              <Link
+                to={"/dashboard/breadcrumb"}
+                className={`block p-4 rounded-xl font-semibold text-gray-700 hover:bg-gradient-to-r hover:from-gray-100 hover:to-gray-200 transition-all duration-300 border-2 ${
+                  getPath === "breadcrumb"
+                    ? "bg-gradient-to-r from-gray-200 to-gray-300 border-gray-400 shadow-lg text-gray-800"
+                    : "border-transparent hover:border-gray-300 hover:shadow-md"
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                Breadcrumb
+              </Link>
+            </li>
           </ul>
         </nav>
       </aside>
 
-      <main className="flex-1 md:ml-6 mt-6">{children}</main>
+      <main className="flex-1 overflow-y-auto ">{children}</main>
     </div>
   );
 };
