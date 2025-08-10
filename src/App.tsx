@@ -7,6 +7,7 @@ import Statistic from "./pages/Statistic";
 import Header from "./pages/Header";
 import Alert from "./pages/Alert";
 import Breadcrumbs from "./pages/Breadcrumbs";
+import CTA from "./pages/CTA";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="header" element={<Header />} />
         <Route path="alert" element={<Alert />} />
         <Route path="breadcrumb" element={<Breadcrumbs />} />
+        <Route path="CTA" element={<CTA />} />
       </Route>
     </Routes>
   );

@@ -40,7 +40,7 @@ const ComponentHighlight = ({ sourceCode, title }: ComponentProps) => {
         {showCode ? "Hide Code" : "Show Code"}
       </button>
 
-      <div className="relative hover:cursor-pointer bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl mb-4 shadow-xl border border-gray-200">
+      <div className="relative bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl mb-4 shadow-xl border border-gray-200">
         <button
           style={{ zIndex: 50 }}
           onClick={(e) => {
@@ -48,7 +48,7 @@ const ComponentHighlight = ({ sourceCode, title }: ComponentProps) => {
             e.stopPropagation();
             handleCopy();
           }}
-          className="absolute top-2 right-2 bg-indigo-600 text-white px-3 py-1 text-sm rounded-md shadow hover:bg-indigo-500"
+          className="absolute hover:cursor-pointer top-2 right-2 bg-indigo-600 text-white px-3 py-1 text-sm rounded-md shadow hover:bg-indigo-500"
         >
           {copyCode ? "Copied!" : "Copy"}
         </button>
