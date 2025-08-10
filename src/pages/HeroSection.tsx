@@ -126,17 +126,76 @@ const HeroSection = () => {
     </div>
   </div>
 </section>`;
+
+const code4 = `<section class="bg-white">
+  <div class="relative isolate px-6 pt-14 lg:px-8">
+    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 text-center">
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        Build your digital presence with confidence
+      </h1>
+      <p class="mt-6 text-lg leading-8 text-gray-600">
+        We create stunning websites and applications that help your business grow faster and smarter.
+      </p>
+      <div class="mt-10 flex items-center justify-center gap-x-6">
+        <a href="#" class="rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-indigo-500">Get Started</a>
+        <a href="#" class="text-sm font-semibold text-gray-900">Learn More →</a>
+      </div>
+    </div>
+    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 overflow-hidden blur-3xl">
+      <div class="w-[72rem] h-[40rem] mx-auto bg-gradient-to-tr from-pink-300 via-indigo-300 to-purple-300 opacity-30 rounded-full"></div>
+    </div>
+  </div>
+</section>
+`
+const code5 = `<section class="bg-white">
+  <div class="container mx-auto flex flex-col lg:flex-row items-center px-6 py-24">
+    <div class="lg:w-1/2 space-y-6 text-center lg:text-left">
+      <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
+        Transform Ideas Into Reality
+      </h1>
+      <p class="text-lg text-gray-600">
+        Collaborate with our expert team to craft digital products that delight and inspire your audience.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <a href="#" class="bg-indigo-600 text-white px-5 py-3 rounded-md shadow hover:bg-indigo-500">Get Started</a>
+        <a href="#" class="border border-gray-300 px-5 py-3 rounded-md hover:bg-gray-50">Our Work</a>
+      </div>
+    </div>
+    <div class="lg:w-1/2 mt-10 lg:mt-0">
+      <img src="https://dummyimage.com/500x350" alt="Hero Image" class="rounded-lg shadow-lg">
+    </div>
+  </div>
+</section>
+`
+
+const code6 = `<section class="relative bg-gray-900 text-white">
+  <img src="https://dummyimage.com/1600x900" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Background">
+  <div class="relative container mx-auto px-6 py-32 text-center">
+    <h1 class="text-4xl sm:text-5xl font-bold">Design that Drives Success</h1>
+    <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-200">
+      We help brands create meaningful connections through beautiful digital experiences.
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+      <a href="#" class="bg-indigo-600 px-6 py-3 rounded-md font-semibold hover:bg-indigo-500">Start a Project</a>
+      <a href="#" class="border border-white px-6 py-3 rounded-md hover:bg-white hover:text-gray-900">Learn More</a>
+    </div>
+  </div>
+</section>
+`
   return (
     <>
       <ComponentHighlight
         sourceCode={code1}
-        title="Hero Component (photos in right)"
+        title="Hero Component"
       />
       <ComponentHighlight
         sourceCode={code2}
-        title="Hero Component (photos in left)"
+        title=""
       />
       <ComponentHighlight sourceCode={code3} title="" />
+      <ComponentHighlight sourceCode={code4} title="" />
+      <ComponentHighlight sourceCode={code5} title="" />
+      <ComponentHighlight sourceCode={code6} title="Blur Background" />
 
     </>
   );
