@@ -20,7 +20,6 @@ const ComponentHighlight = ({ sourceCode, title }: ComponentProps) => {
             ? "bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700"
             : "bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700"
         } text-white`}
-         style={{zIndex:  50, position: "relative"}}
         onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();
@@ -30,18 +29,28 @@ const ComponentHighlight = ({ sourceCode, title }: ComponentProps) => {
         {showCode ? "Hide Code" : "Show Code"}
       </button>
       {showCode ? (
-          <CodeHighlighter
-            codeString={sourceCode}
-            language="html"
-            maxHeight="70vh"
-            outerMaxWidth="calc(100vw - 18rem)"
-          />  
-      ) : (
-        <div 
-        style={{pointerEvents: "none"}}
-          className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl mb-[1rem] shadow-xl p-[0.6rem] mx-4 border border-gray-200"
-          dangerouslySetInnerHTML={{ __html: sourceCode }}
+        <CodeHighlighter
+          codeString={sourceCode}
+          language="html"
+          maxHeight="70vh"
+          outerMaxWidth="calc(100vw - 18rem)"
         />
+      ) : (
+        <div
+          style={{
+            maxHeight: "70vh",
+            position: "relative",
+            overflow: "auto",
+          }}
+          className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl mb-[1rem] shadow-xl p-[0.6rem] mx-4 border border-gray-200"
+        >
+          <div
+            style={{
+              pointerEvents: "none",
+            }}
+            dangerouslySetInnerHTML={{ __html: sourceCode }}
+          />
+        </div>
       )}
     </>
   );
